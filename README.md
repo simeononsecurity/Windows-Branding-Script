@@ -11,3 +11,7 @@
 ```
 .\sos-copybranding.ps1
 ```
+
+## This script utilizes the following tool:
+
+- [Microsoft Security Compliance Toolkit 1.0 - LGPO](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
