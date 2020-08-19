@@ -1,9 +1,3 @@
-if (test-path C:\temp\Files\Branding){
-Write-host branding files already moved
-}else {
-mkdir C:\temp\Files\Branding
-copy-item -Path .\Files\Files\Branding\* -Destination C:\temp\Files\Branding\ -Recurse -Force
-}
 copy-item -Path .\Files\Branding\wallpaper.jpg -Destination C:\Windows\Web\Screen\lockscreen.jpg -Force
 copy-item -Path .\Files\Branding\wallpaper.jpg -Destination C:\Windows\Web\Wallpaper\Theme1\wallpaper.jpg -Force
 copy-item -Path .\Files\Branding\oemlogo.bmp -Destination "C:\ProgramData\Microsoft\User Account Pictures" -Force
