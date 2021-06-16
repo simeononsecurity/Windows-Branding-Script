@@ -1,3 +1,9 @@
+Write-Host "Creating Destination Folders if Needed"
+For-Each ($Path in "C:\Windows\Web\Screen\","C:\ProgramData\Microsoft\User Account Pictures","C:\Windows\Web\Wallpaper\Theme1\"){
+  If (Test-Path "$Path" -ne $true){
+  New-Item -Type Directory "$Path" -Force | Out-Null
+}}
+
 Write-Host "Setting Lockscreen"
 copy-item -Path .\Files\Branding\wallpaper.jpg -Destination C:\Windows\Web\Screen\lockscreen.jpg -Force
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Personalization" -Name LockScreenImage -Type String -Value "C:\Windows\Web\Screen\lockscreen.jpg" -Force
