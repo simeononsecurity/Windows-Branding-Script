@@ -1,7 +1,8 @@
 Write-Host "Creating Destination Folders if Needed"
-For-Each ($Path in "C:\Windows\Web\Screen\","C:\ProgramData\Microsoft\User Account Pictures","C:\Windows\Web\Wallpaper\Theme1\"){
-  If (Test-Path "$Path" -ne $true){
-  New-Item -Type Directory "$Path" -Force | Out-Null
+ForEach ($Path in ("C:\Windows\Web\Screen\","C:\ProgramData\Microsoft\User Account Pictures","C:\Windows\Web\Wallpaper\Theme1\")){
+  If (!(Test-Path -Path "$Path")){
+      Write-Host "$Path does not exist, creating..."
+      New-Item -Type Directory "$Path" -Force | Out-Null
 }}
 
 Write-Host "Setting Lockscreen"
