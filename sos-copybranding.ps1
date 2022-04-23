@@ -1,3 +1,13 @@
+#Continue on error
+$ErrorActionPreference = 'silentlycontinue'
+
+#Require elivation for script run
+Write-Output "Elevating priviledges for this process"
+do {} until (Elevate-Privileges SeTakeOwnershipPrivilege)
+
+#Set Directory to PSScriptRoot
+if ((Get-Location).Path -NE $PSScriptRoot) { Set-Location $PSScriptRoot }
+
 Write-Host "Creating Destination Folders if Needed"
 ForEach ($Path in ("C:\Windows\Web\Screen\","C:\ProgramData\Microsoft\User Account Pictures","C:\Windows\Web\Wallpaper\Theme1\")){
   If (!(Test-Path -Path "$Path")){
