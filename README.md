@@ -1,4 +1,6 @@
-# Setup branding on Windows 10 and Server 2016/2019 Systems
+# Setup branding on Windows 10 and Server 2016/2019/2022 Systems
+
+[![VirusTotal Scan](https://github.com/simeononsecurity/Windows-Branding-Script/actions/workflows/virustotal.yml/badge.svg)](https://github.com/simeononsecurity/Windows-Branding-Script/actions/workflows/virustotal.yml)
 
 ## How to set up the branding files
 - [X] Replace all images with your branding images
