@@ -25,3 +25,4 @@ The script may be launched from the extracted GitHub download like this:
 iwr -useb 'https://simeononsecurity.ch/scripts/sosbranding.ps1'|iex
 ```
 
+## Learn more about [Branding Windows Systems](https://simeononsecurity.ch/github//windows-10-branding/)
